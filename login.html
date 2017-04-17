@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<style>
+		.loginDiv {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -101px 0 0 -100px;
+			width: 186px;
+			height: 200px;
+			text-align: center;
+		}
+		.input{
+			height: 30px;
+			width: 180px;
+			float: left;
+			margin: 5px 0;
+		}
+		.ver-code{
+			height: 36px;
+			width: 75px;
+			float: left;
+			margin: 5px;
+		}
+		.ver-wrapper{
+			position: relative;
+			height: 50px;
+			width: 186px;
+		}
+		.ipt-wrapper{
+			height: 88px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			document.getElementById('VerCode').onclick=function(){
+				this.src='http://127.0.0.1:8080/verification-code?'+Math.random()
+			}
+		}
+
+	</script>
+</head>
+<body>	
+<div class="loginDiv">
+	<div class="ipt-wrapper">
+		<input class="input" type="text" name="username" placeholder="用户名">
+		<input class="input" type="password" name="password" placeholder="密   码"></div>
+	<div class="ver-wrapper">
+		<input class="input" style="width:50%" type="text" name="code" placeholder="验证码">
+		<img id="VerCode" class="ver-code" src="http://127.0.0.1:8080/verification-code"></img>
+	</div>
+	<button style="float:right">登录</button>
+</div>
+</body>
+</html>
