@@ -1,10 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>催收3.0前言</title>
+    <style type="text/css">
+        .div p{
+            text-indent: 2em;
+        }
+    </style>
 </head>
 <body>
-
+    <h1 align="center">前言</h1>
+    <h1 align="center" >
+        <script>
+            var nowDate = new Date();
+            var nowyear = nowDate.getFullYear();
+            var nowmonth = nowDate.getMonth()+1;
+            var nowDay = nowDate.getDate();
+            if (nowmonth > 0 && nowmonth<=9)
+                nowmonth = "0" +nowmonth;
+            if (nowDay > 0 && nowDay<=9)
+                nowDay = "0" +nowDay;
+            var nowtime = "<p style='font-size:20px'>" + nowyear + "年" + nowmonth + "月" + nowDay + "日"  + "</p>";
+            document.write(nowtime);
+        </script>
+    </h1>
+    <div style='font-size:14px'>
+        <p >XXX好:</p></br>
+        <p style="text-indent: 2em">您今日当前逾期的总贷款余额为:<span style="color:red ">XXXX(元)</span>,欠款总额为:<span style="color:red ">XXXXXX(元)</span></p>
+        请加油!!!
+    </div>
+    <table align="left" border="1" >
+        <tr >
+            <td>统计范围</td>
+            <td>案件总数</td>
+            <td>新增案件数</td>
+            <td>新增金额</td>
+            <td>还款总额</td>
+            <td>还款金额</td>
+        </tr>
+        <tr>
+            <td>当日</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>当月</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
 </body>
 </html>
